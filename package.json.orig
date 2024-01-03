@@ -1,6 +1,10 @@
 {
 	"name": "@ghasemkiani/jsdom",
+<<<<<<< HEAD
+	"version": "1.0.1",
+=======
 	"version": "1.1.0",
+>>>>>>> 57511920b897c0deacaf62ee7bdacf56ef8d7621
 	"description": "",
 	"type": "module",
 	"main": "index.js",
