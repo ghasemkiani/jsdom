@@ -11,7 +11,7 @@ class DOM extends DOMBase {
 			_window: null,
 			get window() {
 				if (cutil.na(this._window)) {
-					this.create(this.defaultText, this.defaultMime);
+					this.create();
 				}
 				return this._window;
 			},
