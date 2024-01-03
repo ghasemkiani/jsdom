@@ -1,0 +1,18 @@
+{
+	"name": "@ghasemkiani/jsdom",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "node --test"
+	},
+	"keywords": ["dom"],
+	"author": "Ghasem Kiani",
+	"license": "MIT",
+	"dependencies": {
+		"@ghasemkiani/base": "github:ghasemkiani/base",
+		"@ghasemkiani/dom": "github:ghasemkiani/dom",
+		"jsdom": "^23.0.1"
+	}
+}
