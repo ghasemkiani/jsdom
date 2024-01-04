@@ -6,7 +6,7 @@ import {DOM as DOMBase} from "@ghasemkiani/dom";
 class DOM extends DOMBase {
 	static {
 		cutil.extend(this, {
-			defaultText: '<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"></html>',
+			defaultText: '<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head></head><body></body></html>',
 			defaultMime: "application/xml",
 			_window: null,
 			get window() {
