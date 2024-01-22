@@ -11,7 +11,7 @@ class DOM extends DOMBase {
 			defaultTextH40: '<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head></head><body></body></html>',
 			defaultMime: "application/xml",
 			isGlobal: false,
-			_window: null,
+			_window: null, // singleton
 			get window() {
 				if (cutil.na(this._window)) {
 					this.create();
@@ -52,9 +52,10 @@ const iwjsdom = cutil.extend({}, iwdom, {
 	DOM,
 	defaultText: DOM.defaultText,
 	defaultMime: DOM.defaultMime,
+	useSingletonWindow: false,
 	getWindow() {
-		if (cutil.na(this.DOM._window)) {
-			this.DOM.create(this.defaultText, this.defaultMime);
+		if (!this.useSingletonWindow || cutil.na(this.DOM._window)) {
+			return this.DOM.create(this.defaultText, this.defaultMime);
 		}
 		return this.DOM.get();
 	},
